@@ -38,7 +38,7 @@ p {
   text-align: center;
   padding-top: 15px;
 
-  box-shadow: 0 5px rgb(156, 152, 152, 0.5);
+  box-shadow: 0 10px 20px 0 rgba(70, 68, 68, 0.2);
 }
 #second_head_text {
   color: gray;
@@ -47,7 +47,7 @@ p {
   grid-area: 2/2/3/3;
   background-color: whitesmoke;
   border-radius: 10px;
-  box-shadow: 0 5px rgb(156, 152, 152, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .form {
