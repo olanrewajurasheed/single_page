@@ -13,11 +13,11 @@
 
 .grid_container {
   display: grid;
-  margin: 100px 20%;
+  margin: 100px 15%;
 
   grid-template-columns: 50% 50%;
-  grid-template-rows: 50px 400px;
-  grid-row-gap: 3%;
+  grid-template-rows: 50px 450px;
+  grid-row-gap: 20px;
   grid-column-gap: 5%;
 }
 
@@ -38,7 +38,7 @@ p {
   text-align: center;
   padding-top: 15px;
 
-  box-shadow: 0 10px 20px 0 rgba(70, 68, 68, 0.2);
+  box-shadow: 0px 7px 5px 0px rgba(7, 7, 7, 0.6);
 }
 #second_head_text {
   color: gray;
@@ -47,24 +47,40 @@ p {
   grid-area: 2/2/3/3;
   background-color: whitesmoke;
   border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 7px 5px 0px rgba(7, 7, 7, 0.6);
 }
 
 .form {
-  margin-left: 7%;
-  margin-top: 25px;
+  max-width: 100%;
+  margin: 25px 10% 0 7%;
+}
+.error_textfirst,
+.error_textlast,
+.error_textmail,
+.error_textpass {
+  align-self: flex-end;
+  text-align: right;
+  color: red;
+  font-size: 0.8rem;
+  padding-top: 5px;
+}
+.input_div {
+  display: flex;
+  flex-direction: column;
 }
 .form_class {
-  width: 85%;
+  width: 95%;
   height: 40px;
-  margin-bottom: 15px;
+  /* margin-bottom: 20px; */
   border-radius: 7px;
   border-color: lightgrey;
-  outline-color: gray;
+  outline-color: transparent;
 }
 
-.form_class:hover {
-  outline-color: transparent;
+.form_class:hover,
+.form_class:active {
+  outline-color: lightblue;
+  border-color: lightblue;
 }
 
 .input {
@@ -72,16 +88,24 @@ p {
   font-weight: bolder;
   color: black;
 }
+
+.img_icon {
+  background-image: url(./images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px bottom 10px;
+}
 #form_button {
-  width: 90%;
+  width: 100%;
 }
 button {
   background-color: hsl(154, 59%, 51%);
   font-weight: bold;
   color: whitesmoke;
+  cursor: pointer;
 }
 
 .bottom_text {
+  padding-top: 10px;
   font-size: 0.6rem;
   color: gray;
   text-align: center;
@@ -107,7 +131,7 @@ button {
     display: grid;
     margin: 50px 2%;
     grid-template-columns: repeat(1, 98%);
-    grid-template-rows: 300px 75px 370px;
+    grid-template-rows: 300px 75px 450px;
   }
 
   .big_text_container {

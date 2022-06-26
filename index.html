@@ -34,30 +34,42 @@
       </div>
       <div class="form_container">
         <form class="form">
-          <input
-            type="text"
-            class="form_class input"
-            id="firstname"
-            placeholder="First Name"
-          /><br />
-          <input
-            type="text"
-            class="form_class input"
-            id="lastname"
-            placeholder="Last Name"
-          /><br />
-          <input
-            type="email"
-            class="form_class input"
-            id="email"
-            placeholder="Email Address"
-          /><br />
-          <input
-            type="password"
-            class="form_class input"
-            id="firstname"
-            placeholder="Password"
-          /><br />
+          <div class="input_div">
+            <input
+              type="text"
+              class="form_class input"
+              id="firstname"
+              placeholder="First Name"
+            /><text id="error_textfirst"><i>First Name cannot be empty</i></text><br />
+          </div>
+
+          <div class="input_div">
+            <input
+              type="text"
+              class="form_class input"
+              id="lastname"
+              placeholder="Last Name"
+            /><text id="error_textlast"><i>Last Name cannot be empty</i></text><br />
+          </div>
+
+          <div class="input_div">
+            <input
+              type="email"
+              class="form_class input"
+              id="email"
+              placeholder="Email Address"
+            /><text id="error_textmail"><i>Looks like this is not an email</i></text><br />
+          </div>
+
+          <div class="input_div">
+            <input
+              type="password"
+              class="form_class input"
+              id="password"
+              placeholder="Password"
+            /><text id="error_textpass"><i>Password cannot be empty</i></text><br />
+          </div>
+
           <button type="button" class="form_class" id="form_button">
             CLAIM YOUR FREE TRIAL</button
           ><br />
@@ -70,5 +82,6 @@
         </form>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
