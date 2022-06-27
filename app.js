@@ -37,14 +37,11 @@ function validateFirstName() {
   if (firstName.value.length !== 0) {
     firstName.style.borderColor = "lightblue";
     firstName.classList.remove("img_icon");
+    document.querySelector(".first text").style.display="none";
   } else {
     firstName.style.borderColor = "red";
     firstName.classList.add("img_icon");
-
-    /* const firstText = document.createElement("text");
-    firstText.classList = "error_textfirst";
-    firstText.textContent = "First Name cannot be empty";
-    first.appendChild(firstText); */
+    document.querySelector(".first text").style.display="block";
   }
 }
 
@@ -52,9 +49,11 @@ function validateLastName() {
   if (lastName.value.length !== 0) {
     lastName.style.borderColor = "lightblue";
     lastName.classList.remove("img_icon");
+    document.querySelector(".last text").style.display="none";
   } else {
     lastName.style.borderColor = "red";
     lastName.classList.add("img_icon");
+    document.querySelector(".last text").style.display="block";
   }
 }
 
@@ -62,9 +61,11 @@ function validateEmail() {
   if (email.value.length !== 0) {
     email.style.borderColor = "lightblue";
     email.classList.remove("img_icon");
+    document.querySelector(".email text").style.display="none";
   } else {
     email.style.borderColor = "red";
     email.classList.add("img_icon");
+    document.querySelector(".email text").style.display="block";
   }
 }
 
@@ -72,8 +73,10 @@ function validatePassword() {
   if (password.value.length !== 0) {
     password.style.borderColor = "lightblue";
     password.classList.remove("img_icon");
+    document.querySelector(".pass text").style.display="none";
   } else {
     password.style.borderColor = "red";
     password.classList.add("img_icon");
+    document.querySelector(".pass text").style.display="block";
   }
 }
