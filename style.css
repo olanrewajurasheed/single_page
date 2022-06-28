@@ -133,7 +133,7 @@ button {
     display: grid;
     margin: 50px 2%;
     grid-template-columns: repeat(1, 98%);
-    grid-template-rows: 300px 75px 450px;
+    grid-template-rows: 300px 75px 500px;
   }
 
   .big_text_container {
