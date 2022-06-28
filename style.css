@@ -127,7 +127,7 @@ button {
 
 /* Styling mobile view */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .main_body {
     background-image: url("images/bg-intro-mobile.png");
     background-repeat: no-repeat;
