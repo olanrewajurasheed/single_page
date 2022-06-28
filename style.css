@@ -16,7 +16,7 @@
   margin: 100px 15%;
 
   grid-template-columns: 50% 50%;
-  grid-template-rows: 50px 480px;
+  grid-template-rows: 50px 420px;
   grid-row-gap: 20px;
   grid-column-gap: 5%;
 }
@@ -59,7 +59,7 @@ p {
   display:none;
   align-self: flex-end;
   text-align: right;
-  color: red;
+  color: hsl(0, 100%, 74%);
   font-size: 0.7rem;
   padding-top: 5px;
   padding-bottom: 0;
@@ -74,21 +74,20 @@ p {
   width: 95%;
   height: 40px;
   /* margin-bottom: 20px; */
+  border: solid 2px lightgrey;
   border-radius: 7px;
-  border-color: lightgrey;
-  outline-color: transparent;
 }
 
-.form_class:hover,
-.form_class:active {
-  outline-color: lightblue;
-  border-color: lightblue;
+input:hover,
+input:focus {
+  outline: none;
+  border: solid .5px hsl(248, 32%, 49%);
 }
 
 .input {
   padding-left: 5%;
   font-weight: bolder;
-  color: black;
+  color: rgb(12, 11, 11);
 }
 
 .img_icon {
@@ -120,6 +119,12 @@ button {
   color: rgb(165, 39, 39);
   font-weight: bolder;
 }
+
+/* Styling mail placeholder text to red*/
+.place_color::-webkit-input-placeholder {
+  color: hsl(0, 100%, 74%);
+}
+
 /* Styling mobile view */
 
 @media screen and (max-width: 375px) {
@@ -133,7 +138,7 @@ button {
     display: grid;
     margin: 50px 2%;
     grid-template-columns: repeat(1, 98%);
-    grid-template-rows: 300px 75px 500px;
+    grid-template-rows: 300px 75px 430px;
   }
 
   .big_text_container {

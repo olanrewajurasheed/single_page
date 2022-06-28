@@ -3,9 +3,7 @@ const claimBtn = document.querySelector("button"),
   firstName = document.querySelector("#firstname"),
   lastName = document.querySelector("#lastname"),
   email = document.querySelector("#email"),
-  password = document.querySelector("#password"),
-  errorText = document.querySelector("text"),
-  first = document.querySelector(".first");
+  password = document.querySelector("#password");
 
 // Event Listeners
 eventListeners();
@@ -17,6 +15,8 @@ function eventListeners() {
 // Functions
 
 function claimBtnFnc() {
+  // validate form height
+ 
   //validate first name
   validateFirstName();
 
@@ -29,20 +29,34 @@ function claimBtnFnc() {
   //validate password field
   validatePassword();
 
+  validateFormHeight();
 }
 
-// Excess DRY here, but what do you expect from a noob?
+// Excessive violation of DRY rule here, but what do you expect from a noob?
+
+function validateFormHeight() {
+  if (
+    firstName.value.length !== 0 ||
+    lastName.value.length !== 0 ||
+    email.value.length !== 0 ||
+    password.value.length !== 0
+  ) {
+    document.querySelector(".form_container").style.height = "440px";
+  } else {
+    document.querySelector(".form_container").style.height = "490px";
+  }
+}
 
 function validateFirstName() {
   if (firstName.value.length !== 0) {
     firstName.style.borderColor = "hsl(154, 59%, 51%)";
     firstName.classList.remove("img_icon");
-    document.querySelector(".first text").style.display="none";
+    document.querySelector(".first text").style.display = "none";
   } else {
     firstName.style.borderColor = "hsl(0, 100%, 74%)";
     firstName.classList.add("img_icon");
-    document.querySelector(".first text").style.display="block";
-    document.querySelector(".first input").placeholder="";
+    document.querySelector(".first text").style.display = "block";
+    document.querySelector(".first input").placeholder = "";
   }
 }
 
@@ -50,12 +64,12 @@ function validateLastName() {
   if (lastName.value.length !== 0) {
     lastName.style.borderColor = "hsl(154, 59%, 51%)";
     lastName.classList.remove("img_icon");
-    document.querySelector(".last text").style.display="none";
+    document.querySelector(".last text").style.display = "none";
   } else {
     lastName.style.borderColor = "hsl(0, 100%, 74%)";
     lastName.classList.add("img_icon");
-    document.querySelector(".last text").style.display="block";
-    document.querySelector(".last input").placeholder="";
+    document.querySelector(".last text").style.display = "block";
+    document.querySelector(".last input").placeholder = "";
   }
 }
 
@@ -63,13 +77,13 @@ function validateEmail() {
   if (email.value.length !== 0) {
     email.style.borderColor = "hsl(154, 59%, 51%)";
     email.classList.remove("img_icon");
-    document.querySelector(".email text").style.display="none";
+    document.querySelector(".email text").style.display = "none";
   } else {
     email.style.borderColor = "hsl(0, 100%, 74%)";
     email.classList.add("img_icon");
-    document.querySelector(".email text").style.display="block";
-    document.querySelector(".email input").placeholder="email@example/com";
-    document.querySelector(".email input").placeholder.color="red";
+    document.querySelector(".email text").style.display = "block";
+    document.querySelector(".email input").placeholder = "email@example/com";
+    document.querySelector(".email input").classList.add("place_color");
   }
 }
 
@@ -77,11 +91,11 @@ function validatePassword() {
   if (password.value.length !== 0) {
     password.style.borderColor = "hsl(154, 59%, 51%)";
     password.classList.remove("img_icon");
-    document.querySelector(".pass text").style.display="none";
+    document.querySelector(".pass text").style.display = "none";
   } else {
     password.style.borderColor = "hsl(0, 100%, 74%)";
     password.classList.add("img_icon");
-    document.querySelector(".pass text").style.display="block";
-    document.querySelector(".pass input").placeholder="";
+    document.querySelector(".pass text").style.display = "block";
+    document.querySelector(".pass input").placeholder = "";
   }
 }

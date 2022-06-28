@@ -11,4 +11,4 @@ The designs were created to the following widths:
 - Mobile: 375px
 - Desktop: 1440px
 
-###### HTML form validation applied for empty field
+###### HTML client side form validation applied if there's an empty field. 
